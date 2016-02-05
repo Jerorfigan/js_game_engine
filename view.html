@@ -1,10 +1,14 @@
 <!doctype html>
 <html>
 <head>
-	<title>Clock</title>
+	<title>Stick Figure Test</title>
 	<style>
 		#canvasContainer{
 			position: relative;
+			width: 600px;
+			height: 600px;
+			margin: auto;
+			border: 1px solid black;
 		}
 	</style>
 </head>
@@ -13,8 +17,18 @@
 		<canvas id="canvas" width="600" height="600">Your browser does not support canvas</canvas>
 	</div>
 	<script src="Settings.js"></script>
-	<script src="GraphicsLibrary.js"></script>
-	<script src="GameManager.js"></script>
+	<!-- Graphics -->
+	<script src="Graphics/Point.js"></script>
+	<script src="Graphics/GraphicsLibrary.js"></script>
+	<!-- Attributes -->
+	<script src="Attributes/Render.js"></script>
+	<script src="Attributes/Update.js"></script>
+	<!-- Objects -->
+	<script src="Objects/TestCircle.js"></script>
+	<!-- Managers -->
+	<script src="Managers/ObjectManager.js"></script>
+	<script src="Managers/GameManager.js"></script>
+	<script src="Managers/InitGameManager.js"></script>
 	<script src="Driver.js"></script>
 </body>
 </html>

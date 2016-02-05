@@ -1,26 +1,25 @@
 if(!window.sft) window.sft = {};
 
 (function(){
-	/*******************/
-	/* Static Settings */
-	/*******************/
-	/*
-		1. FPS Settings (Static)
-	*/
-
-	// 1. FPS Settings (Static)
-	var TARGET_FRAME_RATE = 30;
 
 	var Settings = function(){
-		/********************/
-		/* DYNAMIC SETTINGS */
-		/********************/
-
 		/*
-			1. FPS Settings (Dynamic)
+			1. FPS Settings
+			2. Canvas
 		*/
-		this.targetFramePeriodInSeconds = 1/TARGET_FRAME_RATE;
-		this.targetFramePeriodInMilliseconds = this.targetFramePeriodInSeconds * 1000;
+
+		/************************************
+			1. FPS Settings
+		************************************/
+		this.FRAME_RATE = 30;
+		this.FRAME_PERIOD_SECONDS = 1/this.FRAME_RATE;
+		this.FRAME_PERIOD_MILLI = this.FRAME_PERIOD_SECONDS * 1000;
+
+		/************************************
+			2. Canvas
+		************************************/
+		this.CANVAS_WIDTH_PX = 600;
+		this.CANVAS_HEIGHT_PX = 600;
 	};
 
 	window.sft.Settings = Settings;

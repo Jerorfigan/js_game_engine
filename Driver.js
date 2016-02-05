@@ -26,7 +26,7 @@ window.onload = function(){
         };
 
         Driver.prototype.loop = function (currTimeInMilliseconds) {
-            if(currTimeInMilliseconds - this.lastUpdateTimeInMilliseconds > window.sft.Settings.targetFramePeriodInMilliseconds){
+            if(currTimeInMilliseconds - this.lastUpdateTimeInMilliseconds > window.sft.Settings.FRAME_PERIOD_MILLI){
                 this.gameManager.update();
                 this.gameManager.draw();
                 this.lastUpdateTimeInMilliseconds = currTimeInMilliseconds;

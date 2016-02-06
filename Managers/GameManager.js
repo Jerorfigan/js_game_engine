@@ -8,13 +8,17 @@ if(!window.sft) window.sft = {};
 	};
 
 	GameManager.prototype.draw = function(){
-		var drawList = this.objMgr.getAllWithAttr("renderAttr");
-		drawList.forEach(function(obj){ obj.renderAttr.render(); });
+		var renderList = this.objMgr.getAllWithClassOrAttr("", "renderAttr");
+		renderList.forEach(function(obj){ obj.renderAttr.render(); });
 	};
 
 	GameManager.prototype.update = function(){
-		var updateList = this.objMgr.getAllWithAttr("updateAttr");
-		updateList.forEach(function(obj){ obj.updateAttr.update(); });
+		/* Update manager objects before basic objects, as managers will change the update behavior of basic objects */
+		var managerUpdateList = this.objMgr.getAllWithClassOrAttr("manager", "updateAttr");
+		managerUpdateList.forEach(function(obj){ obj.updateAttr.update(); });
+
+		var basicObjUpdateList = this.objMgr.getAllWithClassOrAttr("basic", "updateAttr");
+		basicObjUpdateList.forEach(function(obj){ obj.updateAttr.update(); });
 	};
 
 	window.sft.GameManager = GameManager;

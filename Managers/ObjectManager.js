@@ -54,5 +54,5 @@ if(!window.sft) window.sft = {};
 		delete _objects[key];
 	};
 
-	window.sft.ObjectManager = ObjectManager;
+	window.sft.objMgr = new ObjectManager();
 })();

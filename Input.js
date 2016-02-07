@@ -45,5 +45,16 @@ if(!window.sft) window.sft = {};
 		return _keys[key].isDown;
 	};
 
+	Input.prototype.waitForMouseInput = function(elementID, callback, context){
+		var element = document.getElementById(elementID);
+		if(!element) throw "Invalid elementID";
+		var clicked = false;
+		element.addEventListener("click", function(){
+			callback.apply(context, arguments);
+			clicked = true;	
+		});
+		while(!clicked){}
+	};
+
 	window.sft.input = new Input();
 })();

@@ -2,7 +2,7 @@ if(!window.sft) window.sft = {};
 
 (function(){
 
-	var Settings = function(){
+	var EngineSettings = function(){
 		/*
 			1. FPS Settings
 			2. Canvas
@@ -22,5 +22,5 @@ if(!window.sft) window.sft = {};
 		this.CANVAS_HEIGHT_PX = 600;
 	};
 
-	window.sft.Settings = Settings;
+	window.sft.EngineSettings = EngineSettings;
 })();

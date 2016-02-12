@@ -16,24 +16,29 @@
 	<div id="canvasContainer">
 		<canvas id="canvas" width="600" height="600">Your browser does not support canvas</canvas>
 	</div>
-	<script src="Settings.js"></script>
+	<!-- ////////////////////////////////////////// -->
+	<!-- ////////////////////////////////////////// -->
+	<!-- GAME ENGINE FILES -->
+	<!-- ////////////////////////////////////////// -->
+	<!-- ////////////////////////////////////////// -->
+
+	<!-- Settings -->
+	<script src="Engine/Settings/EngineSettings.js"></script>
 	<!-- Graphics -->
-	<script src="Graphics/Point.js"></script>
-	<script src="Graphics/GraphicsLibrary.js"></script>
+	<script src="Engine/Graphics/Point.js"></script>
+	<script src="Engine/Graphics/BoundingBox.js"></script>
+	<script src="Engine/Graphics/GraphicsLibrary.js"></script>
 	<!-- Attributes -->
-	<script src="Attributes/Render.js"></script>
-	<script src="Attributes/Update.js"></script>
-	<!-- Objects -->
-	<script src="Objects/TestCircle.js"></script>
+	<script src="Engine/Attributes/Render.js"></script>
+	<script src="Engine/Attributes/Update.js"></script>
 	<!-- Managers -->
-	<script src="Managers/EventManager.js"></script>
-	<script src="Managers/ObjectManager.js"></script>
-	<script src="Managers/GameManager.js"></script>
-	<script src="Managers/InitGameManager.js"></script>
+	<script src="Engine/Managers/EventManager.js"></script>
+	<script src="Engine/Managers/ObjectManager.js"></script>
+	<script src="Engine/Managers/GameManager.js"></script>
 	<!-- Libraries -->
-	<script src="Utility.js"></script>
-	<script src="Input.js"></script>
+	<script src="Engine/Libraries/Utility.js"></script>
+	<script src="Engine/Libraries/Input.js"></script>
 	<!-- Driver -->
-	<script src="Driver.js"></script>
+	<script src="Engine/Driver.js"></script>
 </body>
 </html>

@@ -12,12 +12,12 @@ if(!window.sft) window.sft = {};
 
 	GameManager.prototype.draw = function(){
 		var renderList = window.sft.objMgr.getAllWithClassOrAttr("basic", "_attrRender");
-		renderList.forEach(function(obj){ obj.renderAttr.render(); });
+		renderList.forEach(function(obj){ obj._attrRender.render(); });
 	};
 
 	GameManager.prototype.update = function(){
 		var managerUpdateList = window.sft.objMgr.getAllWithClassOrAttr("manager", "_attrUpdate");
-		managerUpdateList.forEach(function(obj){ obj.updateAttr.update(); });
+		managerUpdateList.forEach(function(obj){ obj._attrUpdate.update(); });
 	};
 
 	window.sft.GameManager = GameManager;

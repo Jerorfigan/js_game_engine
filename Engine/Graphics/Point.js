@@ -7,8 +7,8 @@ if(!window.sft) window.sft = {};
 	};
 
 	// Getters / Setters
-	Point.prototype.x = function(newX){ if(!!newX){ this.x = newX; }else{ return this.x; }};
-	Point.prototype.y = function(newY){ if(!!newY){ this.y = newY; }else{ return this.y; }};
+	Point.prototype.x = function(newX){ if(!!newX){ this._x = newX; }else{ return this._x; }};
+	Point.prototype.y = function(newY){ if(!!newY){ this._y = newY; }else{ return this._y; }};
 
 	Point.prototype.toString = function(){ return "<" + this._x + "," + this._y + ">"; };
 
